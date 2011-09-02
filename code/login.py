@@ -25,7 +25,7 @@ def login(userdict, verbose=False):
         if verbose: print "NOT LOGGED IN, ATTEMPTING TO NOW..."
         #then try logging in now
         postdata = 'csrfmiddlewaretoken=%s&username=%s&password=%s' % (gettoken(), username, password)
-        wget('https://auth.whiskeymedia.com/login/', args=' --post-data \'%s\'' % postdata)
+        wget('https://auth.whiskeymedia.com/login/', args='-q --post-data \'%s\'' % postdata)
         if amiloggedin(HTMLFILE, username):
             if verbose: print 'LOGGED IN SUCCESSFULLY. YOU MAY NOW DOWNLOAD STUFF.'
         else:
