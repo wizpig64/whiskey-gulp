@@ -11,6 +11,11 @@ def gettoken():
 
 def cleanup():
     os.remove(HTMLFILE)
+    return
+
+def logout():
+    os.remove(COOKIEFILE)
+    return
 
 def login(userdict, verbose=False):
     username = userdict['username']

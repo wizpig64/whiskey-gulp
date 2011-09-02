@@ -1,1 +1,3 @@
 *.pyc
+conf/user*.py
+conf/cookies
